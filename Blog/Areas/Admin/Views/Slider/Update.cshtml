@@ -1,0 +1,30 @@
+﻿@using Blog.ViewModel.SliderVM
+@model SliderUpdateVM
+@{
+    ViewData["Title"] = "Update";
+}
+<div class="card shadow mb-4">
+    <div class="card-header py-3">
+        <h6 class="m-0 font-weight-bold text-primary">Update Slider</h6>
+    </div>
+    <div class="card-body">
+        <form asp-action="Update" method="post" enctype="multipart/form-data">
+            <div class="form-group">
+                <label asp-for="MainText"></label>
+                <input asp-for="MainText" class="form-control">
+                <span asp-validation-for="MainText" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Text"></label>
+                <input asp-for="Text" class="form-control">
+                <span asp-validation-for="Text" class="Description-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="ImageFile"></label>
+                <input asp-for="ImageFile" class="form-control">
+                <span asp-validation-for="ImageFile" class="text-danger"></span>
+            </div>
+            <button class="btn btn-success">Submit!</button>
+        </form>
+    </div>
+</div>
